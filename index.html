@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Search + Popover Demo</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+  }
+
+  search {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  input[type="search"] {
+    padding: 8px;
+    width: 250px;
+  }
+
+  button {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  [popover] {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Campus Resource Portal</h1>
+
+<search>
+  <form action="https://www.google.com/search" method="GET" target="_blank">
+    <label for="query">Search Resources:</label>
+    <input type="search" id="query" name="q" placeholder="Enter keywords...">
+    <button type="submit">Search</button>
+  </form>
+</search>
+
+<button popovertarget="infoBox">
+  About Portal
+</button>
+
+<div id="infoBox" popover>
+  <h3>About This Portal</h3>
+  <p>This website helps students find study materials quickly.</p>
+
+  <button popovertarget="infoBox" popovertargetaction="hide">
+    Close
+  </button>
+</div>
+
+</body>
+</html>
